@@ -1,0 +1,11 @@
+/* :===== CONST ===== */
+@import url("./const.css");
+
+/* :===== COMPONENTS ===== */
+@import url("../components/components.styles.css");
+
+/* :===== LAYOUTS ===== */
+@import url("../layouts/layouts.styles.css");
+
+/* :===== SCREENS ===== */
+@import url("../screens/screens.styles.css");

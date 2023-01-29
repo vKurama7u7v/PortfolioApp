@@ -1,0 +1,11 @@
+/* ===== PROFILE ===== */
+@import url("./Profile/profile.styles.css");
+
+/* ===== PORTFOLIO ===== */
+@import url("./Portfolio/portfolio.styles.css");
+
+/* ===== DETAILS ===== */
+@import url("./Details/details.styles.css");
+
+/* ===== CONTACT ===== */
+@import url("./Contact/contact.styles.css");
