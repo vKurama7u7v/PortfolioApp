@@ -123,7 +123,7 @@ function SectionBanner(props) {
       <div className="cont__banner">
         <div className="flex-align-middle">
           <div className="content">
-            <h1>{title ? title : "Mi Portafilio"}</h1>
+            <h1>{title ? title : "Mi Portafolio"}</h1>
             <div className="links">
               <Link href={"/"}>Home</Link>
               <i className="fa-solid fa-angles-right"></i>
