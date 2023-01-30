@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "next-share";
 import { map, size } from "lodash";
 import { setDateFormat } from "@/utils/setDate.utils";
+import { WEBSITE_PATH } from "@/utils/const.utils";
 
 import Banner from "@/components/Banner";
 import FilterContent from "@/components/Filters/FilterContent";
@@ -74,7 +80,7 @@ export default function BaseLayout(props) {
                 </>
               ) : (
                 <>
-                  <Content data={data} />
+                  <Content data={data} route={route} />
                 </>
               )}
 
@@ -289,12 +295,26 @@ function Post(props) {
           </div>
           <div className="footer__right">
             Share:
-            <button className="btn-reset btn-share">
-              <i class="fa-brands fa-facebook-f"></i>
-            </button>
-            <button className="btn-reset btn-share">
-              <i class="fa-brands fa-twitter"></i>
-            </button>
+            <WhatsappShareButton
+              url={`${WEBSITE_PATH}/${route}/${data.id}`}
+              title={post.title}
+              separator=":: "
+            >
+              <i class="fa-brands fa-whatsapp btn-share"></i>
+            </WhatsappShareButton>
+            <FacebookShareButton
+              url={`${WEBSITE_PATH}/${route}/${data.id}`}
+              quote={post.title}
+              hashtag={"#AurelioMB"}
+            >
+              <i class="fa-brands fa-facebook-f btn-share"></i>
+            </FacebookShareButton>
+            <TwitterShareButton
+              url={`${WEBSITE_PATH}/${route}/${data.id}`}
+              title={post.title}
+            >
+              <i class="fa-brands fa-twitter btn-share"></i>
+            </TwitterShareButton>
           </div>
         </div>
       </div>
@@ -303,7 +323,7 @@ function Post(props) {
 }
 
 function Content(props) {
-  const { data } = props;
+  const { data, route } = props;
 
   const content = data.attributes;
   return (
@@ -323,7 +343,12 @@ function Content(props) {
 
         <HTMLContent content={content.content} />
 
-        <Buttons code={content.code} demo={content.demo} />
+        <Buttons
+          code={content.code}
+          demo={content.demo}
+          data={data}
+          route={route}
+        />
       </section>
     </>
   );
@@ -342,7 +367,7 @@ function HTMLContent(props) {
 }
 
 function Buttons(props) {
-  const { code, demo } = props;
+  const { code, demo, data, route } = props;
 
   return (
     <>
@@ -376,12 +401,37 @@ function Buttons(props) {
         </div>
         <div className="buttons__right">
           <h2 className="heading__post-section ">Compartir</h2>
-          <button className="btn-reset btn-facebook">
-            <i class="fa-brands fa-facebook-f"></i> Facebook
-          </button>
-          <button className="btn-reset btn-twitter">
-            <i class="fa-brands fa-twitter"></i> Twitter
-          </button>
+          <WhatsappShareButton
+            url={`${WEBSITE_PATH}/${route}/${data.id}`}
+            title={data.attributes.title}
+            separator=":: "
+          >
+            <button className="btn-reset btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </button>
+          </WhatsappShareButton>
+          <FacebookShareButton
+            url={`${WEBSITE_PATH}/${route}/${data.id}`}
+            quote={data.attributes.title}
+            hashtag={"#AurelioMB"}
+          >
+            <button className="btn-reset btn-facebook">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </button>
+          </FacebookShareButton>
+
+          <div className="ocultar">
+            <br />
+          </div>
+
+          <TwitterShareButton
+            url={`${WEBSITE_PATH}/${route}/${data.id}`}
+            title={data.attributes.title}
+          >
+            <button className="btn-reset btn-twitter">
+              <i class="fa-brands fa-twitter"></i> Twitter
+            </button>
+          </TwitterShareButton>
         </div>
       </div>
     </>

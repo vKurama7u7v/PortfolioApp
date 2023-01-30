@@ -449,26 +449,25 @@ section.projects__wrapper .left .post__item-wrapper {
     font-size: 14px;
     letter-spacing: normal;
     text-transform: uppercase;
+
+    display: flex;
+    gap: 1em;
+    align-items: center
 }
 
-.post__item .post__footer .footer__right button:nth-of-type(1) {
+/* .post__item .post__footer .footer__right .btn-share:nth-of-type(1) {
     margin-left: 1em;
-}
+} */
 
-.post__item .post__footer .footer__right button {
+.post__item .post__footer .footer__right .btn-share {
     background: none;
     color: #dcdada;
-    margin-right: 1em;
     font-size: 13px;
     transition: all 0.2s ease-in-out;
 }
 
-.post__item .post__footer .footer__right button:hover {
+.post__item .post__footer .footer__right .btn-share:hover {
     color: var(--primary);
-}
-
-.post__item .post__footer .footer__right button:nth-of-type(2) {
-    margin-right: 0;
 }
 
 section.recent__post {}

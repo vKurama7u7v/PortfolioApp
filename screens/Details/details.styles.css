@@ -110,13 +110,29 @@ section.section__content-post .buttons__content .buttons__right button.btn-faceb
     color: var(--blanco);
 }
 
+section.section__content-post .buttons__content .buttons__right button.btn-whatsapp {
+    background: var(--whatsapp);
+    color: var(--blanco);
+}
+
 section.section__content-post .buttons__content .buttons__right button.btn-twitter {
     background: var(--azul);
     color: var(--blanco);
 }
 
+section.section__content-post .buttons__content .buttons__right button.btn-whatsapp:hover,
 section.section__content-post .buttons__content .buttons__right button.btn-facebook:hover,
 section.section__content-post .buttons__content .buttons__right button.btn-twitter:hover {
     background: var(--primary);
     color: var(--blanco);
+}
+
+section.section__content-post .buttons__content .buttons__right .ocultar {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    section.section__content-post .buttons__content .buttons__right .ocultar {
+        display: block;
+    }
 }

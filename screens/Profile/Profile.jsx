@@ -5,13 +5,12 @@ import Link from "next/link";
 
 import BasicLayout from "@/layouts/BasicLayout";
 
-import { WEBSITE_PATH } from "@/utils/const.utils";
+import { WEBSITE_PATH, CV_PATH } from "@/utils/const.utils";
 import { dataProyectos, dataSkills } from "@/utils/data.utils";
 
 import BG from "../../public/assets/img/bg-cv.png";
 import PersonalInfo from "../../public/assets/img/personal-info-sep.png";
 import PhotoInner from "../../public/assets/img/photo-inner.png";
-// import FILE from "";
 
 export default function Profile(props) {
   const {
@@ -95,15 +94,16 @@ export default function Profile(props) {
             </div>
 
             <div className="download">
-              <Link
+              <a
                 className="reset btn-download"
-                href={"/"}
+                href={CV_PATH}
                 target="_blank"
+                locale={false}
                 download
               >
                 <span>Descargar CV</span>
                 <i className="bx bx-download"></i>
-              </Link>
+              </a>
             </div>
             <section className="section section__profile">
               <div className="left">
