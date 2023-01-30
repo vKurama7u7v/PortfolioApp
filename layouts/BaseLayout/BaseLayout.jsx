@@ -273,7 +273,7 @@ function Post(props) {
             <div className="date">{setDateFormat(post.publishedAt)}</div>
           </div>
           <div className="title__content">
-            <Link href={"/"} className="title">
+            <Link href={`/${route}/${data.id}`} className="title">
               {post.title}
             </Link>
           </div>
