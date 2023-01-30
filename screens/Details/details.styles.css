@@ -10,6 +10,10 @@ section.section__content-post .content h3 {
     line-height: 1.25em;
 }
 
+section.section__content-post .content p {
+    text-align: justify;
+}
+
 section.section__content-post .content-post__title {
     padding-bottom: 1.5em;
 }
