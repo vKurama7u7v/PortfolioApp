@@ -38,6 +38,7 @@ export default function Portfolio(props) {
         setShowColor={setShowColor}
         onResetShowNavbar={onResetShowNavbar}
         onChangeColor={onChangeColor}
+        title={"Aurelio MB - Portafolio"}
       >
         <BaseLayout
           showNavbar={showNavbar}

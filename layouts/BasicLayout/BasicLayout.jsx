@@ -1,5 +1,6 @@
-import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 
 export default function BasicLayout(props) {
   const {
@@ -10,10 +11,13 @@ export default function BasicLayout(props) {
     setShowColor,
     onResetShowNavbar,
     onChangeColor,
+    title,
+    description,
   } = props;
 
   return (
     <>
+      <Seo title={title} description={description} />
       <Navbar
         showNavbar={showNavbar}
         onShowNavbar={onShowNavbar}

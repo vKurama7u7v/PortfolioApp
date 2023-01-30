@@ -39,6 +39,8 @@ export default function Details(props) {
       setShowColor={setShowColor}
       onResetShowNavbar={onResetShowNavbar}
       onChangeColor={onChangeColor}
+      title={result.attributes.title}
+      description={result.attributes.description}
     >
       <BaseLayout
         showNavbar={showNavbar}

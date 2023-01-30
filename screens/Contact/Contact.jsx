@@ -27,6 +27,7 @@ export default function Contact(props) {
         setShowColor={setShowColor}
         onResetShowNavbar={onResetShowNavbar}
         onChangeColor={onChangeColor}
+        title={"Aurelio MB - Contacto"}
       >
         <main className={`l-main main__contact ${onChangeColor()}`}>
           <div className="bg">
