@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const GET_TAGS = gql`
   query GetTags {
-    tags {
+    tags(sort: "name:asc", pagination: { limit: 100 }) {
       data {
         id
         attributes {
