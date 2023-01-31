@@ -135,7 +135,6 @@ function SectionBanner(props) {
               <i className="fa-solid fa-angles-right"></i>
               {title ? (
                 <>
-                  <i className="fa-solid fa-angles-right"></i>
                   <Link href={`/${route}`}>Portafolio</Link>
                   <i className="fa-solid fa-angles-right"></i>
                   <Link href={`/${route}/${id}`} className="link-active">

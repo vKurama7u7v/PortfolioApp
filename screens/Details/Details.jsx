@@ -31,6 +31,8 @@ export default function Details(props) {
   const { portfolio } = data;
   const { data: result } = portfolio;
 
+  console.log(result);
+
   return (
     <BasicLayout
       showNavbar={showNavbar}
@@ -41,6 +43,8 @@ export default function Details(props) {
       onChangeColor={onChangeColor}
       title={result.attributes.title}
       description={result.attributes.description}
+      keywords={result.attributes.keywords ? result.attributes.keywords : null}
+      thumbnail={result.attributes.thumbnail.data.attributes.url}
     >
       <BaseLayout
         showNavbar={showNavbar}

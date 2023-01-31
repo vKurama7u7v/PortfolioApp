@@ -13,11 +13,18 @@ export default function BasicLayout(props) {
     onChangeColor,
     title,
     description,
+    keywords,
+    thumbnail,
   } = props;
 
   return (
     <>
-      <Seo title={title} description={description} />
+      <Seo
+        title={title}
+        description={description}
+        keywords={keywords}
+        thumbnail={thumbnail}
+      />
       <Navbar
         showNavbar={showNavbar}
         onShowNavbar={onShowNavbar}
