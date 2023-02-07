@@ -1,5 +1,5 @@
 // export const BASE_PATH = "http://localhost:1337";
-export const BASE_PATH = "https://portfolioaurelios.herokuapp.com";
+export const BASE_PATH = "https://portfolioaurelios.onrender.com";
 export const WEBSITE_PATH = "https://aureliomarin.netlify.app/";
 export const CV_PATH =
   "https://github.com/vKurama7u7v/AurelioMB/raw/master/docs/CV_Aurelio_Marin_Bautista.pdf";
